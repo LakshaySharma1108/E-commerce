@@ -1,0 +1,326 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>CameraHub - Premium Camera Store</title>
+  {% block multi_links %}
+  
+  
+  
+  <meta name="description" content="Shop premium cameras, lenses, and accessories. Find the perfect equipment for photographers of all levels at CameraHub.">
+  <!-- Open Graph tags for better social media sharing -->
+  <meta property="og:title" content="CameraHub - Premium Camera Store">
+  <meta property="og:description" content="Shop premium cameras, lenses, and accessories. Find the perfect equipment for photographers of all levels at CameraHub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://camerahub.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516035069371-29a1b244cc32">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📷</text></svg>">
+  <!-- Font preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  
+  
+  
+  {% endblock multi_links %}
+
+
+  {% block link %}
+  <!-- Main CSS -->
+  <link rel="stylesheet" href={% static "camera.css" %}>
+
+  {% endblock link %}
+
+</head>
+<body>
+  <header class="main-header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-left">
+          <span>Free shipping on orders over $500</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="#">Contact Us</a>
+          <a href="#">Support</a>
+          <a href="#">Find a Store</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Header -->
+    <div class="container">
+      <div class="header-main">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">CameraHub</a>
+        </div>
+        
+        <!-- Search Bar - Desktop -->
+        <div class="search-bar">
+          <form class="search-form">
+            <input type="text" placeholder="Search for cameras, lenses and accessories...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+        
+        <!-- Navigation Icons -->
+        <div class="header-icons">
+          <!-- Search Icon - Mobile -->
+          <button class="icon-btn mobile-search-toggle">
+            <i class="fas fa-search"></i>
+          </button>
+          
+          <!-- Theme Toggle -->
+          <button class="icon-btn theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <!-- Account -->
+          <a href="#" class="icon-btn">
+            <i class="fas fa-user"></i>
+          </a>
+          
+          <!-- Wishlist -->
+          <a href="#" class="icon-btn">
+            <i class="fas fa-heart"></i>
+          </a>
+          
+          <!-- Cart -->
+          <button class="icon-btn cart-toggle">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCountBadge">0</span>
+          </button>
+          
+          <!-- Mobile Menu Button -->
+          <button class="icon-btn mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Search Bar -->
+      <div class="mobile-search">
+        <form class="search-form">
+          <input type="text" placeholder="Search for products...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="shop.html?category=cameras">Cameras</a></li>
+          <li><a href="shop.html?category=lenses">Lenses</a></li>
+          <li><a href="shop.html?category=accessories">Accessories</a></li>
+          <li><a href="shop.html?deals=true" class="highlight">Deals</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile Navigation Menu -->
+      <div class="mobile-nav">
+        <button class="close-menu"><i class="fas fa-times"></i></button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html?category=cameras">Cameras</a></li>
+          <li><a href="shop.html?category=lenses">Lenses</a></li>
+          <li><a href="shop.html?category=accessories">Accessories</a></li>
+          <li><a href="shop.html?deals=true">Deals</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1520549233664-03f65c1d1327?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" alt="Professional camera on dark background">
+        <div class="overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Capture Every Moment</h1>
+          <p>Find the perfect camera for your photography journey. From beginners to professionals, we have everything you need.</p>
+          <div class="hero-buttons">
+            <a href="shop.html" class="btn btn-primary">Shop Now</a>
+            <a href="shop.html?category=compare" class="btn btn-outline">Compare Models</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+      <div class="container">
+        <h2 class="section-title">Shop By Category</h2>
+        <div class="categories-grid" id="categories-container">
+          <!-- Categories will be dynamically inserted here with JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+      <div class="container">
+        <h2 class="section-title">Featured Cameras</h2>
+        <div class="products-grid" id="featured-products-container">
+          <!-- Featured products will be dynamically inserted here with JavaScript -->
+        </div>
+        <div class="text-center">
+          <a href="shop.html" class="btn btn-outline">View All Cameras</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="accessories-section">
+      <div class="container">
+        <h2 class="section-title">Essential Camera Accessories</h2>
+        <div class="accessories-grid" id="accessories-container">
+          <!-- Accessories will be dynamically inserted here with JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid" id="testimonials-container">
+          <!-- Testimonials will be dynamically inserted here with JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <h2>Join Our Newsletter</h2>
+        <p>Stay updated with the latest camera releases, photography tips, and exclusive offers.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Company Info -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <i class="fas fa-camera"></i>
+            <span>CameraHub</span>
+          </div>
+          <p>Your trusted source for premium photography equipment since 2010.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Shop -->
+        <div class="footer-column">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?category=digital">Digital Cameras</a></li>
+            <li><a href="shop.html?category=dslr">DSLR Cameras</a></li>
+            <li><a href="shop.html?category=mirrorless">Mirrorless Cameras</a></li>
+            <li><a href="shop.html?category=lenses">Lenses</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+            <li><a href="shop.html?sort=newest">New Arrivals</a></li>
+          </ul>
+        </div>
+        
+        <!-- Customer Service -->
+        <div class="footer-column">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Warranty Information</a></li>
+            <li><a href="#">Track Your Order</a></li>
+          </ul>
+        </div>
+        
+        <!-- About Us -->
+        <div class="footer-column">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Photography Guides</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> CameraHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-overlay"></div>
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-cart"><i class="fas fa-times"></i></button>
+      </div>
+      
+      <hr>
+      
+      <div class="cart-empty" id="cart-empty">
+        <i class="fas fa-shopping-cart"></i>
+        <p>Your cart is empty</p>
+        <button class="btn btn-primary continue-shopping">Continue Shopping</button>
+      </div>
+      
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be dynamically inserted here with JavaScript -->
+      </div>
+      
+      <div class="cart-summary" id="cart-summary">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-shipping">
+          <span>Shipping</span>
+          <span id="cart-shipping">Calculated at checkout</span>
+        </div>
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <a href="checkout.html" class="btn btn-primary checkout-btn">Checkout</a>
+        <button class="btn btn-outline continue-shopping">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
